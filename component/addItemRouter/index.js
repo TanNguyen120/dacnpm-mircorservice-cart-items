@@ -7,8 +7,8 @@ router.get('/', function (req, res, next) {
     );
 });
 
-router.post('/', additemController.addTocart);
-router.get('/:carid', additemController.getCart);
-router.delete('/:carid/:productid', additemController.removeItem);
+router.post('/:cartid', additemController.addTocart);
+router.get('/:cartid', additemController.getCart);
+router.delete('/:cartid/:productid', additemController.removeItem);
 
 module.exports = router;

@@ -1,7 +1,7 @@
 const additemService = require('./addItemService');
 
 module.exports.addTocart = (req, res) => {
-    const carid = parseInt(req.body.carid);
+    const carid = parseInt(req.param.carid);
     const productid = parseInt(req.body.productid);
     const quantity = parseInt(req.body.quantity);
     additemService.addTocart(carid, productid, quantity);
